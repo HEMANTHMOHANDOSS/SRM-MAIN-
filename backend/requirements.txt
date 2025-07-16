@@ -6,3 +6,8 @@ python-dotenv==1.0.0
 Werkzeug==2.3.7
 openpyxl==3.1.2
 requests==2.31.0
+# Additional requirements for the enhanced admin dashboard
+# Add these to your existing requirements.txt
+
+openpyxl==3.1.2
+# Note: All other dependencies should already be in your existing requirements.txt

@@ -17,6 +17,9 @@ import StaffDashboard from "./pages/StaffDashboard";
 import TimetableGenerator from "./pages/TimetableGenerator";
 import DepartmentWorkspace from "./pages/DepartmentWorkspace";
 import NotFound from "./pages/NotFound";
+import EnhancedAdminRoute from "./components/EnhancedAdminRoute";
+import EnhancedDepartmentAdminDashboard from "./pages/EnhancedDepartmentAdminDashboard";
+import EnhancedStaffDashboard from "./pages/EnhancedStaffDashboard";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +43,18 @@ const App = () => (
             }
           />
           <Route
+            path="/enhanced-admin"
+            element={<EnhancedAdminRoute />}
+          />
+          <Route
+            path="/enhanced-dept-admin"
+            element={
+              <ProtectedRoute requiredRole="dept_admin">
+                <EnhancedDepartmentAdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/dept-admin"
             element={
               <ProtectedRoute requiredRole="dept_admin">
@@ -52,6 +67,14 @@ const App = () => (
             element={
               <ProtectedRoute requiredRole="staff">
                 <StaffDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/enhanced-staff"
+            element={
+              <ProtectedRoute requiredRole="staff">
+                <EnhancedStaffDashboard />
               </ProtectedRoute>
             }
           />

@@ -202,6 +202,13 @@ const StaffDashboard = () => {
                 {user?.staff_role?.replace('_', ' ').toUpperCase() || 'Staff Member'}
               </p>
             </div>
+            <Button 
+              onClick={() => window.location.href = '/enhanced-staff'}
+              variant="outline" 
+              size="sm"
+            >
+              Enhanced Dashboard
+            </Button>
             <Button onClick={handleLogout} variant="outline" size="sm">
               <LogOut className="h-4 w-4 mr-2" />
               Logout

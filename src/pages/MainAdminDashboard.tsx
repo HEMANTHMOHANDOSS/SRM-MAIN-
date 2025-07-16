@@ -115,6 +115,13 @@ const MainAdminDashboard = () => {
               <p className="font-medium text-gray-900">{user?.name}</p>
               <p className="text-sm text-gray-600">Main Administrator</p>
             </div>
+            <Button 
+              onClick={() => window.location.href = '/enhanced-admin'}
+              variant="outline" 
+              size="sm"
+            >
+              Enhanced Dashboard
+            </Button>
             <Button onClick={handleLogout} variant="outline" size="sm">
               <LogOut className="h-4 w-4 mr-2" /> Logout
             </Button>

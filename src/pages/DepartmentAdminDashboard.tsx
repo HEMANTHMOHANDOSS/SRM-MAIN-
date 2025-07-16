@@ -124,6 +124,13 @@ const DepartmentAdminDashboard = () => {
               <p className="font-medium text-gray-900">{user?.name}</p>
               <p className="text-sm text-gray-600">Department Administrator</p>
             </div>
+            <Button 
+              onClick={() => window.location.href = '/enhanced-dept-admin'}
+              variant="outline" 
+              size="sm"
+            >
+              Enhanced Dashboard
+            </Button>
             <Button onClick={handleLogout} variant="outline" size="sm">
               <LogOut className="h-4 w-4 mr-2" />
               Logout
@@ -231,6 +238,7 @@ const DepartmentAdminDashboard = () => {
               </div>
             </CardContent>
           </Card>
+          
 
           {/* Staff Members */}
           <Card className="lg:col-span-2">
